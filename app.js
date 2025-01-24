@@ -35,10 +35,12 @@ function sortFriend() {
         alert('La lista esta vacia');
         return;
     }
-    let generateNumber = Math.floor(Math.random()*friends.length)+1;
+    let generateNumber = Math.floor(Math.random()*friends.length);
     
     list.innerHTML = "";
     result.textContent = "El amigo sorteado es: " + friends[generateNumber];
 
+    document.getElementById('addButton').setAttribute('disabled', 'true');
+    document.getElementById('sortButton').setAttribute('disabled', 'true');
 }
 
